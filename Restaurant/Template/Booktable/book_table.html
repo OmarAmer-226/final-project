@@ -1,0 +1,59 @@
+
+{% extends 'main.html' %}
+{% load static %}
+
+	{%  block body %}
+	<section class="form-wrap">
+		<div class="container">
+			<h2 class="sec_tit">Book A Table</h2>
+			<p>We consider all the drivers of change gives you the components you need to change to create a truly happens.</p>
+			<div class="form">
+				<form  action="{% url 'book_table' %}" method ='post' >
+					 {% csrf_token %}
+					<div class="form_in flex">
+						<div class="form_input">
+							<span class="form_txt">{{book_table.date}}</span>
+							<div class="form_input-in">
+								<input class="input" type="date" id="date" name="date">
+							</div>
+						</div>
+						<div class="form_input">
+							<span class="form_txt">{{book_table.tiem}}</span>
+							<div class="form_input-in">
+								<input class="input" type="text" placeholder="06:30 PM" id="time" name="time">
+							</div>
+						</div>
+						<div class="form_input">
+							<span class="form_txt">{{book_table.name}}</span>
+							<div class="form_input-in">
+								<input class="input" type="text" placeholder="Enter your name" id="name" name="name">
+							</div>
+						</div>
+						<div class="form_input">
+							<span class="form_txt">{{book_table.phon}}</span>
+							<div class="form_input-in">
+								<input class="input" type="text" placeholder="x-xxx-xxx-xxxx" id="number" name="number">
+							</div>
+						</div>
+						<div class="form_input form_input__big">
+							<span class="form_txt">{{book_table.person}}</span>
+							<div class="form_input-in">
+								<input class="input" type="text" placeholder=" Person" id="person" name="person">
+							</div>
+						</div>
+						<button class="btn btn__red js-btn" type="submit">Book A Table</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<section class="map">
+		<iframe width="100%" height="600" frameborder="0" scrolling="yes" marginheight="10px" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=900&amp;hl=en&amp;q=the%20eighth%20district%20nasr%20city+(Front%20end%20developer)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/distance-area-calculator.html">measure acres/hectares on map</a></iframe>
+	</section>
+	
+{% endblock body%}
+
+
+
+

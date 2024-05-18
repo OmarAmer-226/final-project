@@ -1,0 +1,94 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block body %}
+
+<!-- <section class="grey">
+    <div class="container">
+        <h2 class="sec_tit">Contact Us</h2>
+        <p class="sec_desc">We consider all the drivers of change gives you the components you need to change to create a truly happens.</p>
+        <div >
+            <form>
+                <div class="cn_in flex">
+                    <div class="form_input">
+                        <span class="form_txt">Name</span>
+                        <div class="form_input-in">
+                            <input class="input" type="text" placeholder="Enter your name">
+                        </div>
+                    </div>
+                    <div class="form_input">
+                        <span class="form_txt">Email</span>
+                        <div class="form_input-in">
+                            <input class="input" type="email" placeholder="Enter email addres">
+                        </div>
+                    </div>
+                    <div class="form_input">
+                        <span class="form_txt">Subject</span>
+                        <div class="form_input-in">
+                            <input class="input" type="text" placeholder="Write a subject">
+                        </div>
+                    </div>
+                    <div class="form_input form_input__big">
+                        <span class="form_txt">Message</span>
+                        <div class="form_input-in">
+                            <input class="input" type="text" placeholder="Write your message">
+                        </div>
+                    </div>
+                    <button class="btn btn__red" type="submit">Book A Table</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section> -->
+<section class="contact_us">
+    <div class="contact_header_bg">
+        <div class="contact_header">
+            <h1>
+                contact us
+            </h1>
+            <p>We consider all the drivers of change gives you the components you need to change to create a truly happens.</p>
+        </div>
+        <form class="contact_form">
+            <div class="contact_input_content">
+                <div class="contact_input">
+                    <label for="name">name</label>
+                    <input type="text" placeholder="Enter Your Nam" id="name">
+                </div>
+                <div class="contact_input">
+                    <label for="email">email</label>
+                    <input type="email" placeholder= " Enter Your Email Address " id="email">
+                </div>
+            </div>
+            <div class="contact_input">
+                <label for="subject">subject</label>
+                <input type="text" placeholder="Write a subject" id="subject">
+            </div>
+            <div class="contact_input">
+                <label for="message">message</label>
+                <textarea placeholder="Write Your message" id="message"></textarea>
+            </div>
+            <button>Send</button>
+        </form>
+    </div>
+
+    <div class="contact_info_bg">
+        <div class="contact_info">
+            <div class="contact_info_content">
+                <h4 class="contact_info_title">call us:</h4>
+                <p>+1-234-567-8900</p>
+            </div>
+            <div class="contact_info_content">
+                <h4 class="contact_info_title">hours:</h4>
+                <p>mon-fri:11am - 8pm</p>
+                <p>sat-sun:9am - 10pm</p>
+            </div>
+            <div class="contact_info_content">
+                <h4 class="contact_info_title">our location:</h4>
+                <p>123 Bridge Street             Nowhere Land, LA 12345 United States.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock  %}

@@ -1,0 +1,195 @@
+
+{% extends 'main.html' %}
+{% load static %}
+
+
+{% block body %}
+   <section class="main_menu">
+    <div class="container">
+        <div class="menu_title">
+            <h2 class="sec_tit">Our Menu</h2>
+            <p class="main_txt">We consider all the drivers of change gives you the components you need to
+                change
+                to create a truly happens.</p>
+
+            <div class="menu_btns ">
+                <div class="menu_btn">
+                    <a href="" class="btn btn_all">All</a>
+                </div>
+                <div class="menu_btn">
+                    <a href="" class="btn btn_breakfest">Breakfest</a>
+                </div>
+                <div class="menu_btn">
+                    <a href="" class="btn btn_main_dishes">Main Dishes</a>
+                </div>
+                <div class="menu_btn">
+                    <a href="" class="btn btn_drinks">Drinks</a>
+                </div>
+                <div class="menu_btn">
+                    <a href="" class="btn btn_desserts">Desserts</a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="menu_menu_cards flex">
+            {% for menu in menu_list % }
+                <div class="menu_card">
+                   <div class="menu_img">
+                     <img src="{{menu.image}}" alt="">
+                    </div>
+                    <div class="menu_info">
+                      <span class="menu_cost">$ {{menu.price}}</span>
+                      <h3 class="menu_tit"> {{menu.name}} </h3>
+                      <p class="menu_txt"> {{menu.description}} </p>
+                    </div>
+                </div>
+            {% endfor %}
+            <!-- <div class="menu_card">
+                <div class="menu_img">
+                    <img src="{% static '/img/icons/menu_img_1.jpg' %}" alt="">
+                </div>
+                <div class="menu_info">
+                    <span class="menu_cost">$ 15.99</span>
+                    <h3 class="menu_tit">Hawaiian Pizza</h3>
+                    <p class="menu_txt">Made with eggs, lettuce, salt, oil and other ingredients.</p>
+                </div>
+            </div>
+            <div class="menu_card">
+                <div class="menu_img">
+                    <img src="{% static '/img/icons/menu_img_1.jpg' %}" alt="">
+                </div>
+                <div class="menu_info">
+                    <span class="menu_cost">$ 15.99</span>
+                    <h3 class="menu_tit">Hawaiian Pizza</h3>
+                    <p class="menu_txt">Made with eggs, lettuce, salt, oil and other ingredients.</p>
+                </div>
+            </div>
+            <div class="menu_card">
+                <div class="menu_img">
+                    <img src="{% static '/img/icons/menu_img_1.jpg' %}" alt="">
+                </div>
+                <div class="menu_info">
+                    <span class="menu_cost">$ 15.99</span>
+                    <h3 class="menu_tit">Hawaiian Pizza</h3>
+                    <p class="menu_txt">Made with eggs, lettuce, salt, oil and other ingredients.</p>
+                </div>
+            </div>
+            <div class="menu_card">
+                <div class="menu_img">
+                    <img src="{% static '/img/icons/menu_img_1.jpg' %}" alt="">
+                </div>
+                <div class="menu_info">
+                    <span class="menu_cost">$ 15.99</span>
+                    <h3 class="menu_tit">Hawaiian Pizza</h3>
+                    <p class="menu_txt">Made with eggs, lettuce, salt, oil and other ingredients.</p>
+                </div>
+            </div>
+            <div class="menu_card">
+                <div class="menu_img">
+                    <img src="{% static '/img/icons/menu_img_1.jpg' %}" alt="">
+                </div>
+                <div class="menu_info">
+                    <span class="menu_cost">$ 15.99</span>
+                    <h3 class="menu_tit">Hawaiian Pizza</h3>
+                    <p class="menu_txt">Made with eggs, lettuce, salt, oil and other ingredients.</p>
+                </div>
+            </div>
+            <div class="menu_card">
+                <div class="menu_img">
+                    <img src="{% static '/img/icons/menu_img_1.jpg' %}" alt="">
+                </div>
+                <div class="menu_info">
+                    <span class="menu_cost">$ 15.99</span>
+                    <h3 class="menu_tit">Hawaiian Pizza</h3>
+                    <p class="menu_txt">Made with eggs, lettuce, salt, oil and other ingredients.</p>
+                </div>
+            </div>
+            <div class="menu_card">
+                <div class="menu_img">
+                    <img src="{% static '/img/icons/menu_img_1.jpg' %}" alt="">
+                </div>
+                <div class="menu_info">
+                    <span class="menu_cost">$ 15.99</span>
+                    <h3 class="menu_tit">Hawaiian Pizza</h3>
+                    <p class="menu_txt">Made with eggs, lettuce, salt, oil and other ingredients.</p>
+                </div> 
+            </div>-->
+        </div>
+    </div>
+   </section>
+
+
+   <section class="order">
+    <div class="container">
+        <div class="order_in flex">
+            <div class="order_left">
+                <div class="order_info">
+                    <h2 class="order_tit">
+                        You can order through apps
+                    </h2>
+                    <p class="order_txt">Lorem ipsum dolor sit amet consectetur adipiscing elit enim bibendum sed et
+                        aliquet aliquet risus tempor semper.</p>
+                </div>
+            </div>
+            <div class="order_right">
+                <div class="order_apps flex">
+                    <div class="order_group1 flex">
+                        <div class="order_app">
+                            <a href="" class="order_icon">
+                                <img src="{% static '/img/icons/DiD.png' %}" alt="" class="order_img">
+                            </a>
+                        </div>
+                        <div class="order_app">
+                            <a href="" class="order_icon">
+                                <img src="{% static '/img/icons/del.png' %}" alt="" class="order_img">
+                            </a>
+                        </div>
+                        <div class="order_app">
+                            <a href="" class="order_icon">
+                                <img src="{% static '/img/icons/DooR.png' %}" alt="" class="order_img">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="order_group2 flex">
+                        <div class="order_app">
+                            <a href="" class="order_icon">
+                                <img src="{% static '/img/icons/GRU.png' %}" alt="" class="order_img">
+                            </a>
+                        </div>
+                        <div class="order_app">
+                            <a href="" class="order_icon">
+                                <img src="{% static '/img/icons/InS.png' %}" alt="" class="order_img">
+                            </a>
+                        </div>
+                        <div class="order_app">
+                            <a href="" class="order_icon">
+                                <img src="{% static '/img/icons/JUS.png' %}" alt="" class="order_img">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="order_group1 flex">
+                        <div class="order_app">
+                            <a href="" class="order_icon">
+                                <img src="{% static '/img/icons/DiD.png' %}" alt="" class="order_img">
+                            </a>
+                        </div>
+                        <div class="order_app">
+                            <a href="" class="order_icon">
+                                <img src="{% static '/img/icons/DooR.png' %}" alt="" class="order_img">
+                            </a>
+                        </div>
+                        <div class="order_app">
+                            <a href="" class="order_icon">
+                                <img src="{% static '/img/icons/del.png' %}" alt="" class="order_img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+   {% endblock %}
